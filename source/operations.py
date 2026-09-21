@@ -34,10 +34,14 @@ def adjust_contrast(img,factor):
     return result.astype(np.float32)
 
 
-print(img.dtype)
-print(img.min(), img.max())
+def crop(img,top,bottom,left,right):
+    return img[top:bottom, left:right]
 
+def horizontal_flip(img):
+    return img[ :, ::-1]
 
+def vertical_flip(img):
+    return img[:: -1, :]
 
 
 
